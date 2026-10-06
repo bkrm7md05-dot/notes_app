@@ -3,26 +3,30 @@ import 'package:project/constants.dart';
 
 class CustomButton extends StatelessWidget {
   final String title;
-  const CustomButton({super.key, required this.title});
+  final   VoidCallback onTap  ;
+  const CustomButton({super.key, required this.title, required  this.onTap});
 
   @override
   Widget build(BuildContext context) {
     
-    return Container(
-    
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
       
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(16),
         
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(16),
+          
+          
+          color: kPrimaryColor,
+          
+          
+        ),
+        height: 50,
+        width: double.infinity,
         
-        color: kPrimaryColor,
-        
-        
-      ),
-      height: 50,
-      width: double.infinity,
-      
-      child: Center(child: Text(title, style:  TextStyle(color: Colors.black, fontSize: 21, fontWeight: FontWeight.bold),), ), //color: Colors.black,
-      );
+        child: Center(child: Text(title, style:  TextStyle(color: Colors.black, fontSize: 21, fontWeight: FontWeight.bold),), ), //color: Colors.black,
+        ),
+    );
   }
 }
