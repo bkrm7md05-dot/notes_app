@@ -17,6 +17,7 @@ class CustomButton extends StatelessWidget {
         
         color: kPrimaryColor,
         
+        
       ),
       height: 50,
       width: double.infinity,
