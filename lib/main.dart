@@ -7,7 +7,7 @@ void main() {
 
 class NotesApp extends StatelessWidget {
   const NotesApp({super.key});
-
+//* {Flutter/ Programming/ English /Self[READING] /Entertainment[WATCH]}
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
