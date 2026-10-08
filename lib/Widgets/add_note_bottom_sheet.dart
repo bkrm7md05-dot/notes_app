@@ -35,6 +35,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
   @override
   Widget build(BuildContext context) {
     return Form(
+      autovalidateMode: autoValidateMode,
       key: formKey,                      //!1111111111
 
       child: Column(

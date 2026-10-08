@@ -20,6 +20,7 @@ class CustomTextField extends StatelessWidget {
         if (value?.isEmpty ?? true) {
           return "This Field is Required";
         }
+        return null;
       },
       maxLines: maxLines,
       cursorColor: kPrimaryColor,
