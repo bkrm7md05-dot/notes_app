@@ -5,9 +5,13 @@ abstract class ShowNotesStates {}
 
 class NotesInitial extends ShowNotesStates {}
 
+// class NotesSuccess extends ShowNotesStates {
+//   final List<NoteModel> notes;
+//   NotesSuccess({required this.notes});
+// }
+
 class NotesSuccess extends ShowNotesStates {
-  final List<NoteModel> notes;
-  NotesSuccess({required this.notes});
+  
 }
 
 class NotesFailure extends ShowNotesStates {

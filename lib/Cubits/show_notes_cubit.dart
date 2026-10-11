@@ -9,13 +9,13 @@ part 'show_notes_states.dart';
 class ShowNotesCubit extends Cubit<ShowNotesStates> {
   ShowNotesCubit() : super(NotesInitial());
 
-   List<NoteModel>? notes;
+  List<NoteModel>? notes;
   void fetchAllNotes() {
-  
-
     //! There's no await in here
     var notesBox = Hive.box<NoteModel>(kNotesBox);
 
-   notes = notesBox.values.toList();
+    notes = notesBox.values.toList();
+
+    emit(NotesSuccess());
   }
 }
