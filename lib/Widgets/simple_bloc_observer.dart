@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class SimpleBlocObserver implements BlocObserver {
   @override
   void onChange(BlocBase<dynamic> bloc, Change<dynamic> change) {
-     debugPrint("Chang: ${change}");
+     debugPrint("Chang: $change");
   }
 
   @override
