@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:project/Models/note_model.dart';
 import 'package:project/views/edit_note_view.dart';
 
 class NoteItem extends StatelessWidget {
-  const NoteItem({super.key});
+  final NoteModel note;
+  const NoteItem({required this.note});
 
   @override
   Widget build(BuildContext context) {
@@ -30,14 +32,14 @@ class NoteItem extends StatelessWidget {
             children: [
               ListTile(
                 title: Text(
-                  "Flutter Tips",
+                  "${note.title}",
                   style: TextStyle(color: Colors.black, fontSize: 26),
                 ),
 
                 subtitle: Padding(
                   padding: const EdgeInsets.only(bottom: 16, top: 16),
                   child: Text(
-                    "Build your career with Bakr Mohamed",
+                    "${note.subTitle}",
                     style: TextStyle(color: Colors.black, fontSize: 16),
                   ),
                 ),
@@ -51,7 +53,7 @@ class NoteItem extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    "14 March 2021",
+                    "${note.date}",
                     style: TextStyle(fontSize: 14, color: Colors.black),
                   ),
                 ),
