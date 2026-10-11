@@ -4,7 +4,7 @@ import 'package:project/views/edit_note_view.dart';
 
 class NoteItem extends StatelessWidget {
   final NoteModel note;
-  const NoteItem({required this.note});
+  const NoteItem({super.key, required this.note});
 
   @override
   Widget build(BuildContext context) {
@@ -32,14 +32,14 @@ class NoteItem extends StatelessWidget {
             children: [
               ListTile(
                 title: Text(
-                  "${note.title}",
+                  note.title,
                   style: TextStyle(color: Colors.black, fontSize: 26),
                 ),
 
                 subtitle: Padding(
                   padding: const EdgeInsets.only(bottom: 16, top: 16),
                   child: Text(
-                    "${note.subTitle}",
+                    note.subTitle,
                     style: TextStyle(color: Colors.black, fontSize: 16),
                   ),
                 ),
@@ -53,7 +53,7 @@ class NoteItem extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    "${note.date}",
+                    note.date,
                     style: TextStyle(fontSize: 14, color: Colors.black),
                   ),
                 ),

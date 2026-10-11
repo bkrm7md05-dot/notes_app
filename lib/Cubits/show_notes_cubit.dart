@@ -11,7 +11,7 @@ class ShowNotesCubit extends Cubit<ShowNotesStates> {
 
    List<NoteModel>? notes;
   void fetchAllNotes() {
-    emit(NotesLoading());
+  
 
     //! There's no await in here
     var notesBox = Hive.box<NoteModel>(kNotesBox);
