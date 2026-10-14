@@ -15,6 +15,7 @@ class AddNoteCubit extends Cubit<AddNoteState> {
 
 
       //?
+      
       await Future.delayed(const Duration(milliseconds: 500));
      
      
